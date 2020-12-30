@@ -14,9 +14,9 @@ import { SparepartProfileComponent } from './sparepart-profile/sparepart-profile
 
 
 const routes: Routes = [
+  {path: '',  component:LoginComponent },
+  {path:'dashboard' , component:DashbordComponent},
   {path:'main' , component:MainComponent},
-  {path:'login' , component:LoginComponent},
-  {path:'dashbord' , component:DashbordComponent},
   {path:'driver' , component:DriverDetailsComponent},
   {path:'mechanic' , component:MechanicDetailsComponent},
   {path:'service' , component:ServiceCenterDetailsComponent},
@@ -25,7 +25,6 @@ const routes: Routes = [
   {path:'Mprofile/:id' , component:MechanicProfileComponent},
   {path:'spprofile/:id' , component:SparepartProfileComponent},
   {path:'serprofile/:id' , component:ServiceCenterProfileComponent},
-  {path: '',   redirectTo: '/login', pathMatch: 'full' },
 ];
 
 @NgModule({

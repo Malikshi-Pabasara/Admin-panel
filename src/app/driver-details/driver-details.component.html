@@ -1,28 +1,49 @@
-
 <mat-toolbar color="#d5bee7">
-   <label color="primary">Driver List</label> 
-   <input type="text" [(ngModel)]="searchText" placeholder="Search" class="class3" >
-
-
+  <label color="primary">Driver List</label>
+  <input
+    type="text"
+    [(ngModel)]="searchText"
+    placeholder="Search"
+    class="class3"
+  />
 </mat-toolbar>
-<div class = "container" >
-    <table class = "table">
-        <tr>
-            <th >id</th>
-            <th>name</th>
-            <th>email</th>
-            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;action</th>
-        </tr>
 
-        <tr *ngFor= "let driver of drivers | filter:searchText" >
-            <td>{{driver.id}}</td>
-            <td>{{driver.name}}</td>
-            <td>{{driver.email}}</td>
-            <td>  <button mat-raised-button color="primary" [routerLink]="['/Dprofile/' + driver.id]" >View</button>
-                <button mat-raised-button color="primary" (click)="openDialog()" class="class1">Delete</button>
-                
-            </td>
-        </tr>
-    </table>
+<div class="container">
+  <table class="table">
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>email</th>
+      <th></th>
+    </tr>
 
+    <tr *ngFor="let driver of drivers | filter: searchText">
+      <td>{{ driver.id }}</td>
+      <td>{{ driver.name }}</td>
+      <td>{{ driver.email }}</td>
+      <td>
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="selectedDriver(driver.id)"
+        >
+          View
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="openDialog()"
+          class="class1"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div style="text-align: end">
+  <button mat-button (click)="goToDashboard()" color="primary">
+    Dashboard
+  </button>
 </div>

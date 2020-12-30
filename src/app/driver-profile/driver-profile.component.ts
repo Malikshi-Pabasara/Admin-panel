@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Driver } from '../driver-details/driver';
+import { DriverDetailsService } from '../driver-details/driver-details.service';
 import { UserService } from './user.service';
 
 export interface user{
@@ -17,32 +19,32 @@ export interface user{
 })
 
 export class DriverProfileComponent implements OnInit {
-  user={};
+
   userId: string;
+  driver:Driver
 
   constructor(
-    private userService: UserService,
-    private route: ActivatedRoute
+    private driverDetailsService:DriverDetailsService,
+    private route: ActivatedRoute,
+    private router:Router,
   ) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(paramMap => {
       this.userId = paramMap.get('id');
-      this.getUsers(this.userId);
+     this.driver = this.driverDetailsService.getSelectedDriver(this.userId)
+
+
     });
+
+
   }
 
-  getUsers(id): void {
-    var x = this.userService.getUser(id);
-    x.subscribe(function(result) {
-      this.user.name=result.name;
-      console.log(result);
-    },
-    function(error) {
-      console.log('Error occured !!!!');
-      console.log(error);
-    })
+  driverDetails(){
+    this.router.navigate(['/driver'])
   }
-    
+
+
+
 }
 

@@ -1,37 +1,60 @@
- <mat-grid-list cols="4" rowHeight="4:3">
-    <mat-grid-tile>
-        <mat-card class="class1">
-           <h4><b>Drivers</b></h4> 
-           <br>
-           <mat-progress-spinner class="example-margin" mode="determinate" value="40"></mat-progress-spinner>
-           <button mat-raised-button color="primary" class="class2"routerLink="/driver">Details</button>
-        </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <mat-card class="class1">
-            <h4><b>Mechanics</b></h4>
-            <br>
-            <mat-progress-spinner class="example-margin" mode="determinate" value="100"></mat-progress-spinner>
-            <button mat-raised-button color="primary" class="class2" routerLink="/mechanic">Details</button>
-        </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <mat-card class="class1">
-            <h4><b>Sparepartshop owners</b></h4>
-            <br>
-            <mat-progress-spinner class="example-margin" mode="determinate" value="70"></mat-progress-spinner>
-            <button mat-raised-button color="primary" class="class2" routerLink="/service">Details</button>
-        </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <mat-card class="class1">
-            <h4><b>Servicecenters owners</b></h4>
-            <br>
-            <mat-progress-spinner class="example-margin" mode="determinate" value="80">80</mat-progress-spinner>
-            <button mat-raised-button color="primary" class="class2" routerLink="/spare">Details</button>
-        </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
 
+<div class="dashboard">
+  <mat-card class="class1">
+    <h4><b>Drivers</b></h4>
 
+    <mat-progress-spinner  mode="determinate" value="40">
+    </mat-progress-spinner>
+    <button  style="margin-top: 20px;"
+      mat-raised-button
+      color="primary"
 
+      (click)="goToDriver()"
+    >
+      Details
+    </button>
+  </mat-card>
+
+  <mat-card class="class1">
+    <h4><b>Mechanics</b></h4>
+
+    <mat-progress-spinner  mode="determinate" value="100">
+    </mat-progress-spinner>
+    <button style="margin-top: 20px;"
+      mat-raised-button
+      color="primary"
+
+      (click)="goToMechanic()"
+    >
+      Details
+    </button>
+  </mat-card>
+  <mat-card class="class1">
+    <h4><b>Sparepartshop owners</b></h4>
+
+    <mat-progress-spinner  mode="determinate" value="70">
+    </mat-progress-spinner>
+    <button style="margin-top: 20px;"
+      mat-raised-button
+      color="primary"
+
+      (click)="goToSparepartShop()"
+    >
+      Details
+    </button>
+  </mat-card>
+  <mat-card class="class1">
+    <h4><b>Serviceparts owners</b></h4>
+
+    <mat-progress-spinner  mode="determinate" value="80">
+    </mat-progress-spinner>
+    <button style="margin-top: 20px;"
+      mat-raised-button
+      color="primary"
+
+      (click)="goToServiceCenter()"
+    >
+      Details
+    </button>
+  </mat-card>
+</div>

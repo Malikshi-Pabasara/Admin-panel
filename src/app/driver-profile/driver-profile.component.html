@@ -1,5 +1,18 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>{{user?.name}}</span>
-    </mat-toolbar-row>
-</mat-toolbar>
+
+  <mat-toolbar color="primary">
+      <mat-toolbar-row>
+      </mat-toolbar-row>
+  </mat-toolbar>
+
+
+  <div>
+    <h1> Hello </h1>
+    <p> {{driver.id}} </p>
+    <p> {{driver.name}} </p>
+    <p> {{driver.email}} </p>
+    <p> {{driver.password}} </p>
+  </div>
+
+  <div style="text-align: end;">
+    <button mat-button (click)="driverDetails()"> Drivers </button>
+  </div>
