@@ -1,0 +1,53 @@
+.class1 {
+    height: 100%;
+    width: 100%;
+  }
+  .class2 {
+    font-size: 50px;
+    width: 100%; 
+   margin: 10px 0 20px;
+   bottom: 100em;
+   font-weight: bold;
+  }
+  .class3 {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    margin-left:175px;
+  }
+  .class4 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 150px;
+  }
+  .class5 {
+    align-content: center;
+    margin-bottom: 100px;
+    margin-left: 150px;
+  }
+  .class6 {
+    width: 500px;
+  }
+  .class7{
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+    margin-left: 900px;
+  }
+  .example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }

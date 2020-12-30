@@ -8,3 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'driverfriendly-adminpage';
 }
+export class FormFieldPrefixSuffixExample {
+  hide = true;
+}

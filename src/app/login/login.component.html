@@ -1,0 +1,28 @@
+<mat-toolbar color="primary" class="class1">
+    <mat-toolbar class="class3">
+      <mat-toolbar-row>
+        <span class="class2">Admin Panal Login</span>
+      </mat-toolbar-row>
+      <mat-toolbar-row></mat-toolbar-row>
+  
+      <mat-toolbar-row class="class5"> 
+        <div class="class4">User Name    :</div>
+          <mat-form-field appearance="fill" class="class6">
+          <input matInput>
+        </mat-form-field>
+      </mat-toolbar-row>
+  
+      <mat-toolbar-row class="class5">
+        <span class="class4">Password &nbsp;        :</span>
+        <mat-form-field appearance="fill" class="class6">
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <button mat-raised-button color="primary" class="class7" routerLink="/dashbord">Enter</button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </mat-toolbar>

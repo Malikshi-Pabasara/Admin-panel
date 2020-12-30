@@ -1,0 +1,12 @@
+.class1{
+    height: 230px;
+    width: 350px;
+    text-align: center;
+    background-color:#d5bee7;
+}
+.class2{
+    margin-left: 230px;
+}
+.example-margin {
+    margin: 0 10px;
+  }
